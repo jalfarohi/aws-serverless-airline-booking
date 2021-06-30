@@ -53,6 +53,8 @@ frontend:
   phases:
     preBuild:
       commands:
+        - npm install --save awslabs/aws-lex-web-ui
+        - npm install --save vue vuex vuetify material-design-icons roboto-fontface
         - cd src/frontend
         - test -f aws-exports.js && cat aws-exports.js
         - yarn
